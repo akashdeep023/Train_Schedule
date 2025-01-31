@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Train Schedule</title>
+		<style>
+			body {
+				display: flex;
+				padding: 0;
+				margin: 0;
+				height: 100vh;
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+			}
+			.sidebar {
+				width: 20%;
+				background-color: #191919;
+				color: white;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+			}
+			.sidebar h1 {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			.sidebar button {
+				background-color: #444;
+				color: white;
+				border: none;
+				padding: 12px;
+				margin-bottom: 10px;
+				cursor: pointer;
+				text-align: left;
+				border-radius: 5px;
+				transition: background-color 0.3s;
+			}
+			.sidebar button:hover {
+				background-color: #555;
+			}
+			.content {
+				width: 75%;
+				padding: 20px;
+				background-color: white;
+				border-left: 1px solid #ddd;
+			}
+			.tab-content {
+				display: none;
+			}
+			.tab-content.active {
+				display: block;
+			}
+			.table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			.table th,
+			.table td {
+				border: 1px solid #ddd;
+				padding: 8px;
+				text-align: center;
+			}
+			.table th {
+				background-color: #f4f4f4;
+			}
+			.table tr:nth-child(even) {
+				background-color: #f9f9f9;
+			}
+			.table tr:hover {
+				background-color: #f1f1f1;
+			}
+			.hidden {
+				display: none;
+			}
+
+			.control-panel {
+				background-color: #191919;
+				color: #ecf0f1;
+				padding: 20px;
+				border-radius: 8px;
+			}
+			.control-panel h2 {
+				margin-bottom: 20px;
+				font-size: 24px;
+			}
+			.control-panel table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			.control-panel-body {
+				color: #000;
+			}
+			.control-panel th,
+			.control-panel td {
+				border: 1px solid #272727;
+				padding: 10px;
+				text-align: left;
+			}
+			.control-panel th {
+				background-color: #272727;
+			}
+			.control-panel td {
+				background-color: #ecf0f1;
+			}
+			.control-panel tr:nth-child(even) td {
+				background-color: #bdc3c7;
+			}
+			.schedule-buttons {
+				margin-top: 20px;
+				display: flex;
+				gap: 15px;
+			}
+			.schedule-buttons {
+				background-color: #3498db;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 16px;
+				transition: background-color 0.3s;
+			}
+			.schedule-buttons:hover {
+				background-color: #2980b9;
+			}
+			.print-button {
+				margin-top: 20px;
+				padding: 12px 25px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 16px;
+				transition: background-color 0.3s;
+			}
+			.print-button:hover {
+				background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sidebar">
+			<h1>TrainSchedule</h1>
+			<button onclick="showTab('Main')">Maintance Block</button>
+			<button onclick="showTab('Puntuality')">Puntuality Report</button>
+			<button onclick="showTab('Schedule')">Schedule Report</button>
+		</div>
+
+		<div class="content">
+			<!-- Main Tab (Control Panel) -->
+			<div id="Main" class="tab-content">
+				<div class="control-panel">
+					<h2>Monitor Control Panel</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Setting</th>
+								<th>Value</th>
+							</tr>
+						</thead>
+						<tbody class="control-panel-body">
+							<tr>
+								<td>System Status</td>
+								<td>Operational</td>
+							</tr>
+							<tr>
+								<td>Last Update</td>
+								<td>Today, 10:00 AM</td>
+							</tr>
+							<tr>
+								<td>Network Status</td>
+								<td>Connected</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Schedule Tab -->
+			<div id="Schedule" class="tab-content">
+				<h2>Train Schedule</h2>
+				<table class="table" id="trainTable">
+					<thead>
+						<tr>
+							<th>Train No</th>
+							<th>Train Name</th>
+							<th>Departure</th>
+							<th>Arrival</th>
+							<th>Duration</th>
+							<th>Key Stops</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Train data will be populated here -->
+					</tbody>
+				</table>
+				<div>
+					<button
+						class="schedule-buttons"
+						onclick="randomizeSchedule()"
+					>
+						Randomize Schedule
+					</button>
+					<button class="print-button" onclick="printSchedule()">
+						Print Schedule
+					</button>
+				</div>
+			</div>
+
+			<div id="Puntuality" class="tab-content">
+				<p class="text-center text-gray-600 text-lg">
+					Content for Puntuality tab will be added soon.
+				</p>
+			</div>
+		</div>
+
+		<script>
+			const trainData = [
+				{
+					id: 12951,
+					name: "Rajdhani Express",
+					departure: "17:30",
+					arrival: "09:50 (+1 day)",
+					duration: "16h 20m",
+					stops: "Kota, Vadodara, Surat",
+				},
+				{
+					id: 12909,
+					name: "Mumbai Mail",
+					departure: "06:15",
+					arrival: "23:55",
+					duration: "17h 40m",
+					stops: "Mathura, Ratlam, Ahmedabad, Vapi",
+				},
+				{
+					id: 12009,
+					name: "Shatabdi Express",
+					departure: "06:00",
+					arrival: "21:30",
+					duration: "15h 30m",
+					stops: "Jaipur, Ajmer, Udaipur, Surat",
+				},
+				{
+					id: 22945,
+					name: "Garib Rath",
+					departure: "22:00",
+					arrival: "14:30 (+1 day)",
+					duration: "16h 30m",
+					stops: "Agra, Jhansi, Bhopal, Nashik",
+				},
+				{
+					id: 14567,
+					name: "Freight Train (DFC)",
+					departure: "00:00",
+					arrival: "18:00",
+					duration: "18h 00m",
+					stops: "Dedicated Freight Corridor",
+				},
+			];
+
+			function showTab(tabName) {
+				const allTabs = document.querySelectorAll(".tab-content");
+				allTabs.forEach((tab) => tab.classList.remove("active"));
+
+				const activeTab = document.getElementById(tabName);
+				activeTab.classList.add("active");
+
+				if (tabName === "Schedule") {
+					renderSchedule();
+				}
+			}
+
+			function renderSchedule() {
+				const tableBody = document.querySelector("#trainTable tbody");
+				tableBody.innerHTML = "";
+
+				trainData.forEach((train) => {
+					const row = document.createElement("tr");
+					row.innerHTML = `
+          <td>${train.id}</td>
+          <td>${train.name}</td>
+          <td>${train.departure}</td>
+          <td>${train.arrival}</td>
+          <td>${train.duration}</td>
+          <td>${train.stops}</td>
+        `;
+					tableBody.appendChild(row);
+				});
+			}
+
+			function generateRandomTime() {
+				const hours = String(Math.floor(Math.random() * 24)).padStart(
+					2,
+					"0"
+				);
+				const minutes = String(Math.floor(Math.random() * 60)).padStart(
+					2,
+					"0"
+				);
+				return `${hours}:${minutes}`;
+			}
+
+			function randomizeSchedule() {
+				trainData.forEach((train) => {
+					train.departure = generateRandomTime();
+					train.arrival = generateRandomTime();
+				});
+
+				renderSchedule();
+			}
+
+			function printSchedule() {
+				const printContent =
+					document.getElementById("Schedule").innerHTML;
+				const originalContent = document.body.innerHTML;
+
+				document.body.innerHTML = printContent;
+				window.print();
+				document.body.innerHTML = originalContent;
+				showTab("Schedule");
+			}
+
+			showTab("Main");
+		</script>
+	</body>
+</html>
