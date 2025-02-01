@@ -1,0 +1,101 @@
+Train No.,Train Name,Arrival,Departure,Platform,Delay (mins),Status,Remarks
+61809,Express,22:00,07:52,6,0,Delayed,VIP Movement
+97386,Passenger,14:10,07:53,8,0,On Time,Freight Load
+80896,Freight,11:56,15:45,6,30,On Time,Freight Load
+65713,Passenger,05:34,09:47,6,0,On Time,Signal Failure
+79416,Freight,05:26,17:24,5,0,On Time,VIP Movement
+16250,Express,13:28,16:17,1,15,On Time,VIP Movement
+97223,Shatabdi,11:48,13:25,4,0,Delayed,Track Maintenance
+71195,Freight,17:49,09:49,7,0,On Time,VIP Movement
+29361,Shatabdi,07:31,13:03,1,0,On Time,VIP Movement
+70747,Passenger,18:38,08:18,2,0,On Time,VIP Movement
+20671,Express,11:31,21:10,2,0,On Time,Track Maintenance
+54543,Shatabdi,10:05,17:36,2,0,On Time,Signal Failure
+45777,Freight,09:40,12:04,1,0,Delayed,Track Maintenance
+14678,Rajdhani,17:49,18:20,8,0,On Time,VIP Movement
+23806,Express,09:31,10:49,2,0,Delayed,Freight Load
+65337,Shatabdi,19:36,09:13,4,30,Delayed,Freight Load
+88371,Passenger,21:25,19:48,2,0,Delayed,Freight Load
+78810,Express,14:42,12:20,5,0,Delayed,Freight Load
+40401,Freight,07:54,16:42,7,0,Delayed,VIP Movement
+62013,Freight,12:35,20:01,3,0,On Time,Freight Load
+14854,Express,11:33,15:33,4,0,On Time,VIP Movement
+94980,Shatabdi,16:06,20:32,7,0,On Time,Track Maintenance
+85240,Freight,06:20,07:19,4,0,On Time,Signal Failure
+89325,Passenger,10:29,07:42,6,15,On Time,Freight Load
+36979,Rajdhani,16:37,11:15,6,0,On Time,Track Maintenance
+78618,Express,08:00,21:30,7,15,On Time,Signal Failure
+85926,Passenger,16:33,09:48,2,0,On Time,Freight Load
+99516,Shatabdi,18:10,08:39,8,30,On Time,Signal Failure
+69152,Freight,06:04,13:38,1,30,On Time,Signal Failure
+61235,Freight,21:29,14:19,4,30,On Time,Track Maintenance
+86260,Passenger,11:07,14:08,1,0,On Time,Signal Failure
+11488,Passenger,13:08,16:45,2,45,On Time,Signal Failure
+68202,Freight,09:15,05:57,5,0,Delayed,Freight Load
+16970,Rajdhani,19:04,15:34,1,0,On Time,Freight Load
+46236,Shatabdi,10:06,14:40,8,0,On Time,Signal Failure
+43460,Shatabdi,16:32,07:52,3,0,On Time,Signal Failure
+35158,Express,19:43,15:45,7,15,On Time,Signal Failure
+37827,Shatabdi,06:26,13:29,3,15,On Time,VIP Movement
+34945,Passenger,12:47,07:41,6,0,On Time,Signal Failure
+86224,Shatabdi,22:47,15:40,5,0,On Time,VIP Movement
+62252,Freight,07:25,17:11,4,0,On Time,VIP Movement
+35246,Shatabdi,19:38,05:04,4,0,On Time,Signal Failure
+45730,Rajdhani,13:30,21:36,2,15,Delayed,Freight Load
+60421,Rajdhani,21:42,19:36,8,0,On Time,VIP Movement
+17021,Freight,13:21,15:57,5,45,On Time,VIP Movement
+64231,Express,09:27,16:36,1,0,On Time,VIP Movement
+21494,Freight,17:13,05:04,5,0,On Time,Track Maintenance
+75657,Express,20:01,07:42,4,30,On Time,Freight Load
+46957,Express,17:49,16:51,8,0,Delayed,Freight Load
+37425,Express,05:15,06:17,7,0,On Time,Signal Failure
+34965,Express,07:47,07:42,3,0,On Time,VIP Movement
+71563,Shatabdi,14:15,17:55,8,30,On Time,VIP Movement
+22953,Rajdhani,07:37,11:49,4,0,On Time,Freight Load
+87632,Shatabdi,10:04,15:39,5,0,Delayed,Freight Load
+39433,Freight,18:40,05:33,1,0,Delayed,VIP Movement
+61256,Freight,21:12,18:16,7,15,On Time,VIP Movement
+66070,Rajdhani,11:10,19:19,3,0,On Time,Track Maintenance
+59919,Freight,21:21,11:19,3,0,On Time,VIP Movement
+11406,Shatabdi,10:34,05:03,2,0,On Time,Track Maintenance
+95904,Freight,13:28,10:42,5,0,On Time,Freight Load
+68217,Shatabdi,22:45,10:50,1,0,On Time,Signal Failure
+86307,Shatabdi,08:29,17:55,6,0,Cancelled,Freight Load
+91766,Freight,22:13,10:56,8,0,On Time,VIP Movement
+60329,Express,17:11,18:07,7,0,On Time,Freight Load
+37539,Express,18:45,08:15,7,0,On Time,Track Maintenance
+96658,Shatabdi,20:40,12:35,1,0,On Time,Track Maintenance
+19959,Freight,09:23,10:56,1,0,On Time,Track Maintenance
+15462,Express,08:12,16:22,7,0,On Time,Track Maintenance
+36131,Express,14:31,11:50,1,0,Cancelled,Freight Load
+76476,Freight,05:52,13:55,4,0,On Time,Track Maintenance
+18778,Express,09:27,22:19,1,0,On Time,VIP Movement
+76986,Rajdhani,07:41,13:48,7,0,On Time,Track Maintenance
+51754,Rajdhani,20:20,20:03,4,15,Delayed,Signal Failure
+63728,Freight,20:58,18:52,7,0,On Time,Signal Failure
+19335,Shatabdi,15:05,14:55,5,0,On Time,VIP Movement
+15285,Passenger,06:49,10:26,7,0,On Time,Signal Failure
+41606,Passenger,18:49,13:58,3,0,On Time,Signal Failure
+69633,Passenger,11:36,11:55,3,0,Delayed,Freight Load
+75319,Shatabdi,16:56,07:07,6,0,On Time,VIP Movement
+92237,Express,19:44,18:05,8,0,On Time,VIP Movement
+15607,Rajdhani,10:54,13:19,4,0,Delayed,VIP Movement
+31412,Passenger,17:43,21:08,2,0,On Time,VIP Movement
+36761,Rajdhani,16:55,09:04,2,45,On Time,Track Maintenance
+96197,Freight,10:15,16:22,1,0,On Time,Signal Failure
+78300,Express,21:27,09:43,6,0,On Time,Signal Failure
+73994,Passenger,10:41,07:06,6,0,On Time,Freight Load
+14914,Shatabdi,18:09,16:58,8,0,On Time,VIP Movement
+45462,Rajdhani,14:11,10:48,3,0,Delayed,VIP Movement
+12358,Shatabdi,19:12,17:12,6,0,On Time,Freight Load
+74069,Passenger,13:44,05:07,3,0,On Time,Freight Load
+46452,Express,20:29,11:33,5,0,On Time,Track Maintenance
+14783,Rajdhani,11:30,21:52,5,0,On Time,Signal Failure
+51511,Express,07:35,08:02,6,0,On Time,VIP Movement
+44753,Freight,08:20,07:44,6,0,On Time,Track Maintenance
+50854,Rajdhani,18:47,10:47,8,0,On Time,Signal Failure
+71311,Shatabdi,07:01,10:33,6,0,On Time,VIP Movement
+79258,Express,13:24,08:42,1,0,On Time,Track Maintenance
+70744,Rajdhani,20:46,15:49,1,45,On Time,VIP Movement
+27924,Express,20:00,12:17,6,0,On Time,Freight Load
+47817,Freight,17:04,20:57,8,0,On Time,Track Maintenance
